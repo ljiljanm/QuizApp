@@ -1,0 +1,155 @@
+body {
+  background: #eee;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+}
+
+.container {
+  margin: auto;
+  margin-top: 30px;
+  /* padding: 3px; */
+  background: #fff;
+  border: 2px solid #eee;
+  width: 600px;
+}
+.SetCategory {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 600px;
+  height: 450px;
+}
+.SetCategory h3 {
+  color: red;
+  font-size: 28px;
+  font-weight: 800;
+}
+.SetCategory select {
+  width: 200px;
+  font-size: 18px;
+}
+.timerFirst {
+  color: green;
+}
+
+.timerSecond {
+  color: red;
+  /* background: red; */
+}
+
+.Question {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 3px;
+  transition: all 800ms;
+  height: 110px;
+  vertical-align: bottom;
+}
+.Question h3 {
+  margin-top: 5px;
+}
+/*  Answer fields  */
+.OfferedAnswers {
+  position: relative;
+
+  padding-left: 3px;
+}
+
+.Bravo {
+  position: absolute;
+  top: 0px;
+  left: 250px;
+  width: 45%;
+  height: 200px;
+  background-image: url("./auxilliary/bravo.gif");
+  background-size: 270px 200px;
+  background-repeat: no-repeat;
+  transition: transform 500ms;
+  transform: scale(0);
+}
+.noOfTrue {
+  text-align: right;
+  padding-right: 5px;
+}
+.AnswerContainer {
+  border-top: 1px solid #eef;
+  border-bottom: 1px solid #eef;
+  display: flex;
+  flex-direction: row;
+  padding: 15px 10px;
+  transition: all 300ms ease-in-out;
+}
+.AnswerContainer:hover {
+  background-color: #f5f5ff;
+}
+button {
+  width: 30px;
+  height: 30px;
+
+  border: 1px solid #bbb;
+  background: white;
+  border-radius: 50%;
+  outline: 0;
+  /* transition: all 400ms ease-in-out; */
+}
+.trueAnswer {
+  border: 2px solid green;
+  background: green;
+}
+.trueAnswer::after {
+  line-height: 15px;
+  content: "\2713";
+  font-size: 20px;
+  font-weight: 900;
+  color: white;
+}
+.falseAnswer {
+  border: 2px solid red;
+  background-repeat: no-repeat;
+  background-size: 30px 30px;
+  background-position: -2px -2px;
+  background-image: url("./auxilliary/wrong.png");
+}
+
+.Answer {
+  margin-top: -1px;
+  padding-left: 10px;
+  display: block;
+}
+
+.EndOfQuiz {
+  height: 450px;
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 30px;
+  background-color: green;
+  color: white;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 28px;
+}
+
+.EndOfQuiz button {
+  display: block;
+  margin-top: 30px;
+  box-shadow: 1px 2px 3px #3a5;
+  background-color: red;
+  width: 170px;
+  border: 2px solid white;
+  border-radius: 20px;
+  height: 38px;
+  color: white;
+  font-weight: 700;
+  font-size: 18px;
+}
+.EndOfQuiz button:hover {
+  color: #292;
+  box-shadow: 2px 3px 4px #3f5;
+}
