@@ -57,8 +57,8 @@ const OfferedAnswers = props => {
       ) : (
         <div className="EndOfQuiz">
           {arrayOfTrueAnswers.length > 5
-            ? `Great!!! you had ${arrayOfTrueAnswers.length} true answers!!!`
-            : `Not bad... You had ${arrayOfTrueAnswers.length} true answers!!!`}
+            ? `Great!!! You've had ${arrayOfTrueAnswers.length} true answers!!!`
+            : `Not bad... You've had ${arrayOfTrueAnswers.length} true answers!!!`}
 
           <button
             onClick={() => {
@@ -72,14 +72,12 @@ const OfferedAnswers = props => {
       ),
     [questionObject, clicked, endOfQuiz]
   );
-  // endOfQuiz && setArrayOfTrueAnswers([]);
-  // console.log("In Offered Answers - array of true:", arrayOfTrueAnswers);
   return category === "" ? null : (
     <div>
       <div className="OfferedAnswers">
         <div className="Bravo" style={bravoStyle}></div>
         <div className="noOfTrue">
-          True {arrayOfTrueAnswers.length} of {questionId}
+          True: {arrayOfTrueAnswers.length} of {questionId}
         </div>
         Offered answers:
       </div>
