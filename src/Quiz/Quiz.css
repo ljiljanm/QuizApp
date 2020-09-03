@@ -7,18 +7,22 @@ body {
 
 .container {
   margin: auto;
+  box-sizing: border-box;
   margin-top: 30px;
   /* padding: 3px; */
-  background: #fff;
+  background: #fd9;
+  border-radius: 5%;
   border: 2px solid #eee;
-  width: 600px;
+  width: 95%;
 }
 .SetCategory {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  width: 600px;
+  width: 100%;
+  border-radius: 5%;
+  background-color: #a36;
   height: 450px;
 }
 .SetCategory h3 {
@@ -28,7 +32,12 @@ body {
 }
 .SetCategory select {
   width: 200px;
+  height: 30px;
+  text-align: center;
+  border-radius: 8px;
   font-size: 18px;
+  background-color: orange;
+  color: #900;
 }
 .timerFirst {
   color: green;
@@ -43,29 +52,41 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 3px;
+  padding: 8px;
+  color: #a22;
   transition: all 800ms;
   height: 110px;
   vertical-align: bottom;
 }
+.top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.signature {
+  color: #db5;
+  margin-right: 8px;
+  font-size: 11px;
+}
 .Question h3 {
   margin-top: 5px;
+  font-size: 1.1em;
 }
 /*  Answer fields  */
 .OfferedAnswers {
   position: relative;
 
-  padding-left: 3px;
+  padding-left: 8px;
 }
 
 .Bravo {
   position: absolute;
   top: 0px;
-  left: 250px;
+  left: 180px;
   width: 45%;
   height: 200px;
   background-image: url("./auxilliary/bravo.gif");
-  background-size: 270px 200px;
+  background-size: 135px 100px;
   background-repeat: no-repeat;
   transition: transform 500ms;
   transform: scale(0);
@@ -80,10 +101,12 @@ body {
   display: flex;
   flex-direction: row;
   padding: 15px 10px;
-  transition: all 300ms ease-in-out;
+  transition: background-color 300ms ease-in-out;
 }
 .AnswerContainer:hover {
-  background-color: #f5f5ff;
+  border-radius: 5%;
+
+  background-color: #fc8;
 }
 button {
   width: 30px;
@@ -117,12 +140,13 @@ button {
 .Answer {
   margin-top: -1px;
   padding-left: 10px;
+  padding-top: 5px;
   display: block;
 }
 
 .EndOfQuiz {
   height: 450px;
-  width: 600px;
+  width: 95%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -152,4 +176,20 @@ button {
 .EndOfQuiz button:hover {
   color: #292;
   box-shadow: 2px 3px 4px #3f5;
+}
+
+@media (min-width: 600px) {
+  .container {
+    width: 580px;
+  }
+  .SetCategory {
+    width: 580px;
+  }
+  .Question h3 {
+    margin-top: 5px;
+    font-size: 18px;
+  }
+  .EndOfQuiz {
+    width: 580px;
+  }
 }

@@ -56,11 +56,21 @@ const OfferedAnswers = props => {
         ))
       ) : (
         <div className="EndOfQuiz">
-          Great!!! you had {arrayOfTrueAnswers.length} true answers!!!
-          <button onClick={resetAll}>Start Again?</button>
+          {arrayOfTrueAnswers.length > 5
+            ? `Great!!! you had ${arrayOfTrueAnswers.length} true answers!!!`
+            : `Not bad... You had ${arrayOfTrueAnswers.length} true answers!!!`}
+
+          <button
+            onClick={() => {
+              resetAll();
+              setArrayOfTrueAnswers([]);
+            }}
+          >
+            Start Again?
+          </button>
         </div>
       ),
-    [questionObject, clicked]
+    [questionObject, clicked, endOfQuiz]
   );
   // endOfQuiz && setArrayOfTrueAnswers([]);
   // console.log("In Offered Answers - array of true:", arrayOfTrueAnswers);

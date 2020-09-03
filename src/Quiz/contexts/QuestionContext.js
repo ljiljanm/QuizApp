@@ -49,7 +49,9 @@ export const QuestionContextProvider = props => {
     if (questionId < 9) {
       setQuestionId(questionId + 1);
     } else {
+      console.log("Got here to set end of quiz to true");
       setEndOfQuiz(true);
+      console.log(endOfQuiz);
     }
   };
   let questionObject;

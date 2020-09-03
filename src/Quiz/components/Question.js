@@ -10,6 +10,7 @@ const Question = props => {
     <div className="SetCategory">
       <h3>Select category</h3>
       <select onChange={chooseCategory}>
+        <option value=""> --Select category--</option>
         <option value="9">General Knowledge</option>
         <option value="10">Books</option>
         <option value="11">Film</option>
@@ -24,8 +25,13 @@ const Question = props => {
     </div>
   ) : (
     <div className="Question">
-      <div>
-        Question <span>{questionId + 1} of 10</span>:
+      <div className="top">
+        <div>
+          Question <span>{questionId + 1} of 10</span>:
+        </div>
+        <div className="signature">
+          created by <i>Ljiljan Maksimovic</i>
+        </div>
       </div>
       <h3 dangerouslySetInnerHTML={{ __html: actualQuestion }}></h3>
     </div>
